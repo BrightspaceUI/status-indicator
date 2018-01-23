@@ -1,0 +1,77 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<link rel="import" href="../d2l-typography/d2l-typography-shared-styles.html">
+<!--
+`d2l-status-indicator`
+Polymer-based web component for a D2L status indicator
+@demo demo/index.html
+-->
+
+<dom-module id="d2l-status-indicator">
+	<template>
+		<style>
+			:host {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.indicator {
+				margin: inherit;
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 12px;
+				padding: 2px 10px 2px 10px;
+				font-size: 0.6rem;
+				line-height: 0.7rem;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+
+			:host([hidden]) {
+				display: none;
+			}
+			:host([state="default"]) .indicator {
+				border-color: var(--d2l-color-celestine);
+				color: var(--d2l-color-celestine);
+			}
+			:host([state="success"]) .indicator {
+				border-color: var(--d2l-color-olivine-minus-1);
+				color: var(--d2l-color-olivine-minus-1);
+			}
+			:host([state="alert"]) .indicator {
+				border-color: var(--d2l-color-cinnabar);
+				color: var(--d2l-color-cinnabar);;
+			}
+			:host([state="null"]) .indicator {
+				border-color: var(--d2l-color-ferrite);
+				color: var(--d2l-color-ferrite);
+			}
+		</style>
+
+		<div class="indicator">
+			[[text]]
+		</div>
+	</template>
+	<script>
+		Polymer({
+			is: 'd2l-status-indicator',
+			properties: {
+				/**
+				 * state of status indicator to display. Valid values are 'default', 'success', 'alert', and 'null'.
+				 */
+				state: {
+					type: String,
+					value: 'default',
+					reflectToAttribute: true
+				},
+				/**
+				 * Text for status indicator.
+				 */
+				text: {
+					type: String,
+					value: null
+				}
+			}
+		});
+	</script>
+</dom-module>

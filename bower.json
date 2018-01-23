@@ -18,5 +18,14 @@
     "polymer.json",
     "wct.config.json",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "d2l-colors": "^3.1.2",
+    "d2l-typography": "^6.1.2",
+    "polymer": "1.9.1 - 2"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "^2.0.0",
+    "web-component-tester": "^6.5.0"
+  }
 }
