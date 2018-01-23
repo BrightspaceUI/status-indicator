@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<title>d2l-status-indicator test</title>
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../web-component-tester/browser.js"></script>
+		<link rel="import" href="../d2l-status-indicator.html">
+	</head>
+	<body>
+
+		<test-fixture id="d2l-status-indicator-fixture">
+			<template>
+				<d2l-status-indicator type="null" text="test"></d2l-status-indicator>
+			</template>
+		</test-fixture>
+
+		<script>
+			describe('d2l-status-indicator', function() {
+				var component;
+				beforeEach(function() {
+					component = fixture('d2l-status-indicator-fixture');
+				});
+				it('should contain the demo text', function() {
+				});
+			});
+		</script>
+	</body>
+</html>
