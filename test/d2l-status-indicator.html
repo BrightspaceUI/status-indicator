@@ -12,7 +12,7 @@
 
 		<test-fixture id="d2l-status-indicator-fixture">
 			<template>
-				<d2l-status-indicator type="null" text="test"></d2l-status-indicator>
+				<d2l-status-indicator state="default" text="test"></d2l-status-indicator>
 			</template>
 		</test-fixture>
 
@@ -22,7 +22,32 @@
 				beforeEach(function() {
 					component = fixture('d2l-status-indicator-fixture');
 				});
-				it('should contain the demo text', function() {
+
+				it('can be instantiated', function() {
+					expect(component.is).to.equal('d2l-status-indicator');
+				})
+
+				it('should set the demo text', function() {
+					expect(component.attributes.getNamedItem('text').value).to.equal('test');
+				});
+
+				it('should have the initially specified default state', function() {
+					expect(component.attributes.getNamedItem('state').value).to.equal('default');
+				});
+
+				it('should have state "success" when spcified', function() {
+					component['state'] = 'success';
+					expect(component.attributes.getNamedItem('state').value).to.equal('success');
+				});
+
+				it('should have state "alert" when spcified', function() {
+					component['state'] = 'alert';
+					expect(component.attributes.getNamedItem('state').value).to.equal('alert');
+				});
+
+				it('should have state "null" when spcified', function() {
+					component['state'] = 'null';
+					expect(component.attributes.getNamedItem('state').value).to.equal('null');
 				});
 			});
 		</script>

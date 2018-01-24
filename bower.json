@@ -9,15 +9,15 @@
   "homepage": "https://github.com/Brightspace/status-indicator",
   "private": true,
   "ignore": [
-    "demo",
     ".editorconfig",
-    "eslintrc.json",
     ".gitignore",
     ".travis.yml",
+    "demo",
+    "eslintrc.json",
     "package.json",
     "polymer.json",
-    "wct.config.json",
-    "test"
+    "test",
+    "wct.config.json"
   ],
   "dependencies": {
     "d2l-colors": "^3.1.2",

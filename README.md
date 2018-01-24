@@ -4,8 +4,6 @@
 
 For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
 
-## Installation
-
 ## Usage
 
 Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `d2l-status-indicator.html`:
@@ -16,11 +14,10 @@ Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyf
   <link rel="import" href="../d2l-status-indicator/d2l-status-indicator.html">
 </head>
 
-```html
 <d2l-status-indicator state="default" text="Due Today"></d2l-status-indicator>
 ```
 
-A `<d2l-status-indicator>` custom element can now be used in your application by specifying one of the following states: `default`, `success`, `alert`, or `null`.
+A `<d2l-status-indicator>` custom element can now be used in your application by specifying one of the following states: `default`, `success`, `alert`, or `null` as well as the text to display within the indicator.
 
 ## Developing, Testing and Contributing
 

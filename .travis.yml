@@ -1,5 +1,10 @@
 language: node_js
-node_js: node
+node_js: 6
+dist: trusty
+sudo: required
+before_script:
+- npm run test:lint
 script:
-- npm run test:lint:js
-- npm run test:lint:wc
+- set -e
+- xvfb-run wct test --skip-plugin sauce
+- 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then xvfb-run wct test --skip-plugin local; fi'
