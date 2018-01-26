@@ -35,17 +35,17 @@
 					expect(component.attributes.getNamedItem('state').value).to.equal('default');
 				});
 
-				it('should have state "success" when spcified', function() {
+				it('should have state "success" when specified', function() {
 					component['state'] = 'success';
 					expect(component.attributes.getNamedItem('state').value).to.equal('success');
 				});
 
-				it('should have state "alert" when spcified', function() {
+				it('should have state "alert" when specified', function() {
 					component['state'] = 'alert';
 					expect(component.attributes.getNamedItem('state').value).to.equal('alert');
 				});
 
-				it('should have state "null" when spcified', function() {
+				it('should have state "null" when specified', function() {
 					component['state'] = 'null';
 					expect(component.attributes.getNamedItem('state').value).to.equal('null');
 				});
