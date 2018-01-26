@@ -7,7 +7,10 @@ before_script:
 script:
 - set -e
 - xvfb-run wct test --skip-plugin sauce
-- 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then xvfb-run wct test --skip-plugin local; fi'
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then xvfb-run wct test --skip-plugin local;
+  fi
 env:
   global:
-    SAUCE_USERNAME: Desire2Learn
+  - SAUCE_USERNAME: Desire2Learn
+  #SAUCE_ACCESS_KEY
+  - secure: UfeF+Sym/YODHqkHaSuHyvX2QPH2gkhY5HZQY272vmijFyVyOG6ato/MEI7UybyFAxMGeksHOYzRgAhgW+oJ59EMdLK7sBEkk/y9qYM0ZrglZhiqA73d6rPR/e9RyRbi6V9YkHkAhyG5vT/glbK9isAEomxp4fe6tJ0poP3e0Tz/IalXHHq3i+KBG6iAp0Atwdw1YH4EYuOAF7RrDqeWQimUhwLMePeqwYDcULAgXWhl5sEKPfMaT9wtC2sc4i/37TWL73468/SoAtVZ1tQaw7y7HbgGtgucnIb0wpHmDx6bBmrG40c1+IWJvnsc16DoiXvP1qJz7QFjJw0i0rvABiSjxnkQ4sqIhI24QXqpO52LhD/v9t+qaKslcGKNNsgSyyqSjClqZFo5mKLdV038z1wGjjk6ZklZMkQ5/KzNh7D8XT6n88iPRhu7Q23ru0MIZv0rdB5CiDnTaKNDDTWPiyeFTViVc6D1S45VNwCfVeWLtFGIf5Cl/YWLvgI/V739sDmMuoDNmQo+tNj25C+l/Vxah9/HiMLeCzE4nxIEAXlcac1bU1GFw+T8CmZiWFcBSOm2QES61v+J90DMZLB0fw2lN98LLXv6/Tf20s+thorKBGsNRZ/Eai2KIquCFqWQGnfGvys3SMcBWgEBKnSl7Of6pcG+HGXLgkZyLw5gtdQ=
