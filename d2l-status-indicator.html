@@ -14,7 +14,7 @@ Polymer-based web component for a D2L status indicator
 				flex-direction: row;
 			}
 
-			.indicator {
+			.d2l-status-indicator {
 				margin: inherit;
 				border-width: 1px;
 				border-style: solid;
@@ -32,25 +32,26 @@ Polymer-based web component for a D2L status indicator
 			:host([hidden]) {
 				display: none;
 			}
-			.indicator {
+
+			.d2l-status-indicator {
 				border-color: var(--d2l-color-celestine);
 				color: var(--d2l-color-celestine);
 			}
-			:host([state="success"]) .indicator {
+			:host([state="success"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-olivine-minus-1);
 				color: var(--d2l-color-olivine-minus-1);
 			}
-			:host([state="alert"]) .indicator {
+			:host([state="alert"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-cinnabar);
 				color: var(--d2l-color-cinnabar);;
 			}
-			:host([state="null"]) .indicator {
+			:host([state="null"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-ferrite);
 				color: var(--d2l-color-ferrite);
 			}
 		</style>
 
-		<div class="indicator">
+		<div class="d2l-status-indicator">
 			[[text]]
 		</div>
 	</template>
