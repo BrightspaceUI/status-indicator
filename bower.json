@@ -1,0 +1,31 @@
+{
+  "name": "d2l-status-indicator",
+  "description": "Polymer-based web component for a D2L status indicator",
+  "main": "d2l-status-indicator.html",
+  "authors": [
+    "D2L Corporation"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Brightspace/status-indicator",
+  "private": true,
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    ".travis.yml",
+    "demo",
+    "eslintrc.json",
+    "package.json",
+    "polymer.json",
+    "test",
+    "wct.config.json"
+  ],
+  "dependencies": {
+    "d2l-colors": "^3.1.2",
+    "polymer": "1.9 - 2"
+  },
+  "devDependencies": {
+    "d2l-typography": "^6.1.2",
+    "iron-demo-helpers": "^2.0.0",
+    "web-component-tester": "^6.5.0"
+  }
+}
