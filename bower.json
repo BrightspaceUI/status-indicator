@@ -8,14 +8,14 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/Brightspace/status-indicator",
   "ignore": [
+    "demo",
+    "test",
     ".editorconfig",
+    ".eslintrc.json",
     ".gitignore",
     ".travis.yml",
-    "demo",
-    "eslintrc.json",
     "package.json",
     "polymer.json",
-    "test",
     "wct.config.json"
   ],
   "dependencies": {
