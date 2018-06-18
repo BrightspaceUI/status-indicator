@@ -7,6 +7,7 @@
 		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
 		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+		<link rel="import" href="../../d2l-colors/d2l-colors.html">
 		<link rel="import" href="../../d2l-typography/d2l-typography.html">
 		<link rel="import" href="../d2l-status-indicator.html">
 		<custom-style>
@@ -19,7 +20,17 @@
 			html {
 				font-size: 20px;
 			}
-			</style>
+			.align-item {
+				color: var(--d2l-color-tungsten);
+				font-size: 0.7rem;
+			}
+			.align-item.bullet::before {
+				color: var(--d2l-color-tungsten);
+				content: '\002022';
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+		</style>
 	</head>
 	<body unresolved class="d2l-typography">
 		<div class="vertical-section-container centered">
@@ -49,6 +60,15 @@
 			<demo-snippet>
 				<template>
 					<d2l-status-indicator state="none" text="closed"></d2l-status-indicator>
+				</template>
+			</demo-snippet>
+
+			<h3>Alignment with other elements</h3>
+			<demo-snippet>
+				<template strip-whitespace>
+					<d2l-status-indicator state="alert" text="overdue"></d2l-status-indicator>
+					<span class="align-item" style="margin-left:10px;">Grade 6 Science</span>
+					<span class="align-item bullet">Assignment</span>
 				</template>
 			</demo-snippet>
 		</div>
