@@ -15,16 +15,17 @@ Polymer-based web component for a D2L status indicator
 			}
 
 			.d2l-status-indicator {
-				border-width: 1px;
+				border-radius: 0.6rem;
 				border-style: solid;
-				border-radius: 12px;
-				padding: 2px 10px 2px 10px;
+				border-width: 1px;
+				cursor: default;
 				font-size: 0.6rem;
-				line-height: 0.7rem;
-				text-transform: uppercase;
 				font-weight: bold;
-				text-overflow: ellipsis;
+				line-height: 1;
 				overflow: hidden;
+				padding: 2px 10px 2px 10px;
+				text-transform: uppercase;
+				text-overflow: ellipsis;
 				white-space: nowrap;
 			}
 
@@ -42,7 +43,7 @@ Polymer-based web component for a D2L status indicator
 			}
 			:host([state="alert"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-cinnabar);
-				color: var(--d2l-color-cinnabar);;
+				color: var(--d2l-color-cinnabar);
 			}
 			:host([state="none"]) .d2l-status-indicator,
 			:host([state="null"]) .d2l-status-indicator {
