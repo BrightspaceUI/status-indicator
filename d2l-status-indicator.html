@@ -12,13 +12,14 @@ Polymer-based web component for a D2L status indicator
 			:host {
 				display: flex;
 				flex-direction: row;
+				height: 100%;
 			}
 
 			.d2l-status-indicator {
 				border-width: 1px;
 				border-style: solid;
 				border-radius: 12px;
-				padding: 2px 10px 2px 10px;
+				padding: 5px 10px 5px 10px;
 				font-size: 0.6rem;
 				line-height: 0.7rem;
 				text-transform: uppercase;
@@ -36,14 +37,18 @@ Polymer-based web component for a D2L status indicator
 				border-color: var(--d2l-color-celestine);
 				color: var(--d2l-color-celestine);
 			}
+
 			:host([state="success"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-olivine-minus-1);
 				color: var(--d2l-color-olivine-minus-1);
 			}
+
 			:host([state="alert"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-cinnabar);
-				color: var(--d2l-color-cinnabar);;
+				color: var(--d2l-color-cinnabar);
+				;
 			}
+
 			:host([state="null"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-ferrite);
 				color: var(--d2l-color-ferrite);
