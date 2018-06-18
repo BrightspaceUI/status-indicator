@@ -45,9 +45,9 @@
 					expect(component.attributes.getNamedItem('state').value).to.equal('alert');
 				});
 
-				it('should have state "null" when specified', function() {
-					component['state'] = 'null';
-					expect(component.attributes.getNamedItem('state').value).to.equal('null');
+				it('should have state "none" when specified', function() {
+					component['state'] = 'none';
+					expect(component.attributes.getNamedItem('state').value).to.equal('none');
 				});
 			});
 		</script>

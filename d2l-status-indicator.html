@@ -44,6 +44,7 @@ Polymer-based web component for a D2L status indicator
 				border-color: var(--d2l-color-cinnabar);
 				color: var(--d2l-color-cinnabar);;
 			}
+			:host([state="none"]) .d2l-status-indicator,
 			:host([state="null"]) .d2l-status-indicator {
 				border-color: var(--d2l-color-ferrite);
 				color: var(--d2l-color-ferrite);
@@ -59,7 +60,7 @@ Polymer-based web component for a D2L status indicator
 			is: 'd2l-status-indicator',
 			properties: {
 				/**
-				 * state of status indicator to display. Valid values are 'default', 'success', 'alert', and 'null'.
+				 * State of status indicator to display. Valid values are: 'default', 'success', 'alert', and 'none'.
 				 */
 				state: {
 					type: String,
