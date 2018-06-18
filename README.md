@@ -26,7 +26,7 @@ Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyf
 </head>
 ```
 
-A `<d2l-status-indicator>` custom element can now be used in your application by specifying one of the following states: `default`, `success`, `alert`, or `null` as well as the text to display within the indicator.
+A `<d2l-status-indicator>` custom element can now be used in your application by specifying one of the following states: `default`, `success`, `alert`, or `none` as well as the text to display within the indicator.
 
 <!---
 ```
@@ -55,7 +55,7 @@ A `<d2l-status-indicator>` custom element can now be used in your application by
 <d2l-status-indicator state="default" text="Due Today"></d2l-status-indicator>
 <d2l-status-indicator state="success" text="complete"></d2l-status-indicator>
 <d2l-status-indicator state="alert" text="overdue"></d2l-status-indicator>
-<d2l-status-indicator state="null" text="closed"></d2l-status-indicator>
+<d2l-status-indicator state="none" text="closed"></d2l-status-indicator>
 ```
 
 ## Developing, Testing and Contributing
