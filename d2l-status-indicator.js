@@ -1,13 +1,17 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../d2l-colors/d2l-colors.html">
-<!--
+/**
 `d2l-status-indicator`
 Polymer-based web component for a D2L status indicator
 @demo demo/index.html
--->
+*/
 
-<dom-module id="d2l-status-indicator">
-	<template strip-whitespace>
+import '../@polymer/polymer/polymer-legacy.js';
+
+import '../d2l-colors/d2l-colors.js';
+import { Polymer } from '../@polymer/polymer/lib/legacy/polymer-fn.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<dom-module id="d2l-status-indicator">
+	<template strip-whitespace="">
 		<style>
 			:host {
 				border-color: var(--d2l-color-celestine);
@@ -47,26 +51,27 @@ Polymer-based web component for a D2L status indicator
 		</style>
 		[[text]]
 	</template>
-	<script>
-		Polymer({
-			is: 'd2l-status-indicator',
-			properties: {
-				/**
-				 * State of status indicator to display. Valid values are: 'default', 'success', 'alert', and 'none'.
-				 */
-				state: {
-					type: String,
-					value: 'default',
-					reflectToAttribute: true
-				},
-				/**
-				 * Text for status indicator.
-				 */
-				text: {
-					type: String,
-					value: null
-				}
-			}
-		});
-	</script>
-</dom-module>
+
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
+Polymer({
+	is: 'd2l-status-indicator',
+	properties: {
+		/**
+		 * State of status indicator to display. Valid values are: 'default', 'success', 'alert', and 'none'.
+		 */
+		state: {
+			type: String,
+			value: 'default',
+			reflectToAttribute: true
+		},
+		/**
+		 * Text for status indicator.
+		 */
+		text: {
+			type: String,
+			value: null
+		}
+	}
+});

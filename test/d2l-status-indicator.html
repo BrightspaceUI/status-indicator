@@ -4,9 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 		<title>d2l-status-indicator test</title>
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<script src="../../web-component-tester/browser.js"></script>
-		<link rel="import" href="../d2l-status-indicator.html">
+		<script src="../../@babel/polyfill/browser.js"></script>
+		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script src="../../wct-browser-legacy/browser.js"></script>
+		<script type="module" src="../d2l-status-indicator.js"></script>
 	</head>
 	<body>
 
@@ -16,40 +17,41 @@
 			</template>
 		</test-fixture>
 
-		<script>
-			describe('d2l-status-indicator', function() {
-				var component;
-				beforeEach(function() {
-					component = fixture('d2l-status-indicator-fixture');
-				});
+		<script type="module">
+import '../d2l-status-indicator.js';
+describe('d2l-status-indicator', function() {
+	var component;
+	beforeEach(function() {
+		component = fixture('d2l-status-indicator-fixture');
+	});
 
-				it('can be instantiated', function() {
-					expect(component.is).to.equal('d2l-status-indicator');
-				});
+	it('can be instantiated', function() {
+		expect(component.is).to.equal('d2l-status-indicator');
+	});
 
-				it('should set the demo text', function() {
-					expect(component.attributes.getNamedItem('text').value).to.equal('test');
-				});
+	it('should set the demo text', function() {
+		expect(component.attributes.getNamedItem('text').value).to.equal('test');
+	});
 
-				it('should have the initially specified default state', function() {
-					expect(component.attributes.getNamedItem('state').value).to.equal('default');
-				});
+	it('should have the initially specified default state', function() {
+		expect(component.attributes.getNamedItem('state').value).to.equal('default');
+	});
 
-				it('should have state "success" when specified', function() {
-					component['state'] = 'success';
-					expect(component.attributes.getNamedItem('state').value).to.equal('success');
-				});
+	it('should have state "success" when specified', function() {
+		component['state'] = 'success';
+		expect(component.attributes.getNamedItem('state').value).to.equal('success');
+	});
 
-				it('should have state "alert" when specified', function() {
-					component['state'] = 'alert';
-					expect(component.attributes.getNamedItem('state').value).to.equal('alert');
-				});
+	it('should have state "alert" when specified', function() {
+		component['state'] = 'alert';
+		expect(component.attributes.getNamedItem('state').value).to.equal('alert');
+	});
 
-				it('should have state "none" when specified', function() {
-					component['state'] = 'none';
-					expect(component.attributes.getNamedItem('state').value).to.equal('none');
-				});
-			});
-		</script>
+	it('should have state "none" when specified', function() {
+		component['state'] = 'none';
+		expect(component.attributes.getNamedItem('state').value).to.equal('none');
+	});
+});
+</script>
 	</body>
 </html>
