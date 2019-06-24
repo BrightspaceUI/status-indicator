@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<title>d2l-status-indicator demo</title>
+		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script type="module" src="../../d2l-colors/d2l-colors.js"></script>
+		<script type="module" src="../../d2l-typography/d2l-typography.js"></script>
+		<script type="module" src="../d2l-status-indicator.js"></script>
+		<style>
+			html {
+				font-size: 20px;
+			}
+			@media (prefers-color-scheme: dark) {
+				html {
+					background-color: #262829;
+				}
+			}
+		</style>
+	</head>
+	<body unresolved class="d2l-typography">
+
+		<custom-style include="d2l-typography">
+			<style is="custom-style" include="d2l-typography">/* empty */</style>
+		</custom-style>
+
+		<div>
+
+			<h3>Default</h3>
+			<d2l-status-indicator state="default" text="due today"></d2l-status-indicator>
+
+			<h3>Success</h3>
+			<d2l-status-indicator state="success" text="complete"></d2l-status-indicator>
+
+			<h3>Alert</h3>
+			<d2l-status-indicator state="alert" text="overdue"></d2l-status-indicator>
+
+			<h3>None</h3>
+			<d2l-status-indicator state="none" text="closed"></d2l-status-indicator>
+
+		</div>
+
+	</body>
+</html>
