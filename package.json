@@ -40,7 +40,7 @@
   },
   "main": "d2l-status-indicator.js",
   "dependencies": {
-    "d2l-colors": "BrightspaceUI/colors#semver:^4",
+    "@brightspace-ui/core": "^1.29.0",
     "@polymer/polymer": "^3.0.0"
   }
 }
